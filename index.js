@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
+const Host="0.0.0.0"
 const server = express();
 server.use(cors());
 
@@ -17,6 +17,6 @@ server.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-server.listen(5000, () => {
+server.listen(5000, Host, () => {
   console.log(`Server is listening on port 5000`);
 });
