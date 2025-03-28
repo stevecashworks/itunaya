@@ -17,6 +17,6 @@ server.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-server.listen(5000, Host, () => {
+server.listen(5000, "0.0.0.0", () => {
   console.log(`Server is listening on port 5000`);
 });
